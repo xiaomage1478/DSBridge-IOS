@@ -28,13 +28,13 @@ typedef void (^JSCallback)(NSString * _Nullable result,BOOL complete);
  * Add a Javascript Object to dsBridge with namespace.
  * @param object
  * which implemented the javascript interfaces
- * @param namespace  
+ * @param nameSpace  
  * if empty, the object have no namespace.
  **/
-- (void)addJavascriptObject:(id _Nullable ) object namespace:(NSString *  _Nullable) namespace;
+- (void)addJavascriptObject:(id _Nullable ) object namespace:(NSString *  _Nullable) nameSpace;
 
 // Remove the Javascript Object with the supplied namespace
-- (void)removeJavascriptObject:(NSString *  _Nullable) namespace;
+- (void)removeJavascriptObject:(NSString *  _Nullable) nameSpace;
 
 // Test whether the handler exist in javascript
 - (void) hasJavascriptMethod:(NSString * _Nonnull) handlerName methodExistCallback:(void(^ _Nullable)(bool exist))callback;
